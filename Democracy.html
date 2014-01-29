@@ -1,0 +1,111 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Diplomacy</title>
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/Diplomacy.js"></script>
+        <style type="text/css">
+            div.location {
+                border:solid 1px black;
+                width:1px;
+                height:1px;
+                text-align: center;
+                display:inline-block;
+                border-radius:5px;
+                margin:5px;
+                overflow: hidden;
+            }
+            div.location h2 {
+                font-size:12pt;
+            }
+            
+            /**
+              * Dialog
+            */
+            div.underlay {
+                position:fixed;
+                top:0px;
+                left:0px;
+                padding:0px;
+                margin:0px;
+                width:100%;
+                height:100%;
+                overflow: hidden;
+                opacity:0.7;
+                background-color:black;
+                display:none;
+            }
+            div.dialog_container {
+                position:fixed;
+                top:0px;
+                left:0px;
+                padding:0px;
+                margin:0px;
+                width:100%;
+                height:100%;
+                overflow: hidden;
+                text-align: center;
+                display:none;
+
+            }
+            div.dialog_box {
+                background-color:lightgray;
+                border-radius:3px;
+                margin: auto;
+                margin-top:10px;
+                text-align:center;
+                width:350px;
+                color:#303030;;
+                border:solid 2px white;
+            }
+            h2.dialog_title {
+                background-color: darkred;
+                color:white;
+            }
+            input#dialog_button_1 {
+                background-color:darkgreen;
+                border-radius:3px;
+            }
+            span#dialog_close {
+                position: absolute;
+                top: 15px;
+                margin-left: 120px;
+                font-weight: bold;
+                border: solid 1px red;
+                color: red;
+                border-radius: 2px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="territory_template" class="location">
+            <h2>Location Name</h2>
+            <h3>Ruler</h3>
+            <div class="units">0</div>
+
+        </div>
+
+        <div id="gameboard">
+
+        </div>
+        
+        <div class="overlay underlay">
+            &nbsp;
+        </div>
+        <div class="dialog_container">
+            <div class="dialog_box">
+                <h2 class="dialog_title">Dialog Title</h2>
+                <div class="dialog_message">Dialog Message</div>
+                <input id="dialog_button_1" type="button" value="Button 1" />
+                <span id="dialog_close">X</span>
+                <!--<input id="dialog_button_2" type="button" value="Button 2" />-->
+            </div>
+        </div>
+    </body>
+</html>
